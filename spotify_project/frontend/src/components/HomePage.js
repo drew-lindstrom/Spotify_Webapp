@@ -44,7 +44,7 @@ export default class HomePage extends Component {
                         <Button color="primary" to="/join" component={Link}>
                             Join a Room
             </Button>
-                        <Button color='default' to='/info' component={Link}>
+                        <Button color="default" to="/info" component={Link}>
                             Info
             </Button>
                         <Button color="secondary" to="/create" component={Link}>
@@ -73,8 +73,8 @@ export default class HomePage extends Component {
                             return this.state.roomCode ? (
                                 <Redirect to={`/room/${this.state.roomCode}`} />
                             ) : (
-                                    this.renderHomePage()
-                                );
+                                this.renderHomePage()
+                            );
                         }}
                     />
                     <Route path="/join" component={RoomJoinPage} />
